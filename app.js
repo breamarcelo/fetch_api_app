@@ -106,7 +106,6 @@ usersArr.forEach(user => {
         fetch(campUrl, campParams)
             .then(res => res.json())
             .then(data => {
-                console.log('Nuevo cliente')
                 console.log(data.result[0])
             })
     )
