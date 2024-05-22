@@ -8,12 +8,12 @@ const authParams = {
     displayLangSelection: 'false'
 };
 
-const dniArr = ['01','02','03','04','05']
+const usersArr = ['1122A','2233B','3344C','4455D','5567E']
 
 const authCookie = ${YOUR_AUTH_COOKIE}
 
-dniArr.forEach(dni => {
-    const dataUrl = `https://${YOUR_WEBPAGE}/api/linesUsage/v1/groupedLinesUsage/get?individualPublicId=${dni}&onlyActive=false`;
+usersArr.forEach(user => {
+    const dataUrl = `https://${YOUR_WEBPAGE}/api/linesUsage/v1/groupedLinesUsage/get?individualPublicId=${user}&onlyActive=false`;
     const dataParams = {
         'headers': {
             // Res headers
@@ -51,7 +51,7 @@ dniArr.forEach(dni => {
         }
     }
     
-    const campUrl = `https://${YOUR_WEBPAGE}/openapi/xplselectorlines/v1/getCommercialCampaigns?document=${dni}&brand=brand&site=FCUPdV&onlyActive=true&tipoAccionDL=ALL`
+    const campUrl = `https://${YOUR_WEBPAGE}/openapi/xplselectorlines/v1/getCommercialCampaigns?document=${user}&brand=brand&site=FCUPdV&onlyActive=true&tipoAccionDL=ALL`
     const campParams = {
         'headers': {
             // Res headers
